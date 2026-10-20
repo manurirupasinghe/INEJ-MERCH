@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EDITORIAL LOOKBOOK — INEJ STUDIOS | SOLITUDE</title>
+  <meta name="description" content="Visual lookbook for INEJ Collection 01 'Solitude'. Architectural silhouettes and high-density cotton photographed in stillness.">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              black: '#09090b',
+              surface: '#121215',
+              card: '#18181b',
+              border: 'rgba(255,255,255,0.08)',
+              subtle: '#27272a',
+              text: '#f4f4f5',
+              muted: '#a1a1aa'
+            }
+          },
+          fontFamily: {
+            brand: ['Syne', 'sans-serif'],
+            serif: ['Cinzel', 'serif'],
+            mono: ['JetBrains Mono', 'monospace'],
+            body: ['Space Grotesk', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="bg-[#09090b] text-[#f4f4f5] antialiased selection:bg-white selection:text-black">
+
+  <div class="grain-overlay"></div>
+
+  <!-- Announcement Bar -->
+  <div class="bg-black border-b border-zinc-800 text-zinc-300 py-2 overflow-hidden select-none">
+    <div class="animate-ticker flex items-center whitespace-nowrap text-xs font-mono tracking-widest uppercase">
+      <span class="mx-6 text-zinc-400">✦ LOOKBOOK VOL. 01 // ARCHIVAL PHOTOGRAPHY</span>
+      <span class="mx-6 text-emerald-400">● DROP 01: SOLITUDE AVAILABLE NOW</span>
+      <span class="mx-6 text-white font-bold">● "WHERE SILENCE SPEAKS LOUDER THAN WORDS"</span>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header id="main-navbar" class="sticky top-0 left-0 w-full z-40 bg-[#09090b]/90 border-b border-zinc-800/80 backdrop-blur-md py-4 px-4 sm:px-8">
+    <div class="max-w-7xl mx-auto flex items-center justify-between">
+      
+      <div class="flex items-center gap-6">
+        <button id="mobile-menu-btn" class="lg:hidden p-2 text-zinc-300 hover:text-white" aria-label="Open menu">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+        </button>
+
+        <nav class="hidden lg:flex items-center gap-8 text-xs font-mono tracking-widest uppercase">
+          <a href="shop.html" class="text-zinc-400 hover:text-white transition-colors">The Drop</a>
+          <a href="lookbook.html" class="text-white border-b border-white pb-0.5">Lookbook</a>
+          <a href="about.html" class="text-zinc-400 hover:text-white transition-colors">Manifesto</a>
+          <a href="contact.html" class="text-zinc-400 hover:text-white transition-colors">Support</a>
+        </nav>
+      </div>
+
+      <div class="text-center">
+        <a href="index.html" class="group inline-block">
+          <span class="text-3xl sm:text-4xl font-extrabold font-brand tracking-[0.25em] text-white group-hover:opacity-80 transition-opacity">
+            INEJ
+          </span>
+          <span class="block text-[9px] font-mono tracking-[0.4em] text-zinc-400 uppercase -mt-1">
+            STUDIOS // CLOTHING
+          </span>
+        </a>
+      </div>
+
+      <div class="flex items-center gap-3 sm:gap-5">
+        <div class="hidden sm:flex items-center border border-zinc-800 rounded-sm p-0.5 bg-black/60 font-mono text-[10px]">
+          <button data-currency="LKR" class="currency-toggle-btn px-2.5 py-1 text-zinc-400 hover:text-white transition-colors">LKR</button>
+          <button data-currency="USD" class="currency-toggle-btn px-2.5 py-1 text-zinc-400 hover:text-white transition-colors">USD</button>
+        </div>
+
+        <button class="open-cart-btn relative flex items-center gap-2 bg-zinc-900 hover:bg-zinc-800 border border-zinc-700/80 px-3.5 py-2 transition-all">
+          <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/>
+          </svg>
+          <span class="text-xs font-mono font-bold tracking-wider text-white hidden sm:inline">BAG</span>
+          <span class="cart-count-badge hidden w-4 h-4 rounded-full bg-white text-black text-[10px] font-bold flex items-center justify-center font-mono">0</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Menu Drawer -->
+  <div id="mobile-menu-backdrop" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 hidden opacity-0 transition-opacity duration-300"></div>
+  <aside id="mobile-menu-drawer" class="fixed top-0 left-0 h-full w-80 max-w-full bg-[#0d0d10] border-r border-zinc-800 z-50 transform -translate-x-full transition-transform duration-300 p-6 flex flex-col justify-between">
+    <div>
+      <div class="flex justify-between items-center pb-6 border-b border-zinc-800">
+        <span class="text-2xl font-bold font-brand tracking-widest text-white">INEJ</span>
+        <button id="mobile-menu-close" class="p-2 text-zinc-400 hover:text-white" aria-label="Close menu">✕</button>
+      </div>
+      <nav class="mt-8 space-y-5 font-brand text-lg tracking-wider">
+        <a href="index.html" class="block text-zinc-400 hover:text-white">Home</a>
+        <a href="shop.html" class="block text-zinc-400 hover:text-white">Shop Drop 01: Solitude</a>
+        <a href="lookbook.html" class="block text-white">Visual Lookbook</a>
+        <a href="about.html" class="block text-zinc-400 hover:text-white">Brand Manifesto</a>
+        <a href="contact.html" class="block text-zinc-400 hover:text-white">Contact & WhatsApp</a>
+      </nav>
+    </div>
+    <div class="pt-6 border-t border-zinc-800 text-xs font-mono text-zinc-500">
+      INEJ STUDIOS © 2026 // STILLNESS OVER CHAOS
+    </div>
+  </aside>
+
+  <!-- Lookbook Hero -->
+  <section class="py-20 text-center max-w-4xl mx-auto px-4">
+    <span class="text-xs font-mono tracking-[0.4em] text-emerald-400 uppercase block mb-3">EDITORIAL ARCHIVE</span>
+    <h1 class="text-5xl sm:text-7xl font-extrabold font-brand tracking-tight text-white uppercase">
+      SOLITUDE LOOKBOOK
+    </h1>
+    <p class="text-sm font-serif italic text-zinc-400 mt-4 max-w-xl mx-auto">
+      "Silence is not an absence, but a profound physical space where the individual discovers sovereign clarity."
+    </p>
+    <div class="mt-6 flex justify-center gap-6 text-xs font-mono text-zinc-500">
+      <span>PHOTOGRAPHY: INEJ ATELIER</span>
+      <span>•</span>
+      <span>LOCATION: MONOLITH STUDIO</span>
+      <span>•</span>
+      <span>DROP: 01</span>
+    </div>
+  </section>
+
+  <!-- Lookbook Editorial Spreads -->
+  <section class="max-w-7xl mx-auto px-4 sm:px-8 pb-28 space-y-24">
+    
+    <!-- Look 01: The Heavyweight Hoodie -->
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center border-t border-zinc-800/80 pt-16">
+      <div class="lg:col-span-7 overflow-hidden bg-zinc-950 border border-zinc-800 aspect-[3/4] max-h-[800px] group">
+        <img src="assets/images/hoodie-solitude.jpg" alt="Solitude Heavyweight Hoodie Lookbook" class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105">
+      </div>
+      <div class="lg:col-span-5 space-y-6 lg:pl-6">
+        <span class="text-xs font-mono text-zinc-500 tracking-widest uppercase">LOOK 01 // ARCHITECTURAL HOOD</span>
+        <h2 class="text-3xl font-extrabold font-brand text-white uppercase tracking-wider">
+          THE WEIGHT OF SILENCE
+        </h2>
+        <p class="text-xs font-mono text-zinc-300 leading-relaxed">
+          Engineered to drape like armor. The 480 GSM French Terry creates clean geometric lines that resist slouching, encasing the upper body in serene calm.
+        </p>
+        <div class="p-4 bg-zinc-950 border border-zinc-800 font-mono text-xs space-y-1">
+          <p class="text-white font-bold">SOLITUDE HEAVYWEIGHT HOODIE</p>
+          <p class="text-zinc-400">Obsidian Black · 480 GSM Combed Cotton</p>
+          <p class="text-emerald-400 pt-1" data-price-lkr="14500" data-price-usd="48">Rs. 14,500</p>
+        </div>
+        <div>
+          <a href="product.html?id=solitude-hoodie" class="inline-block bg-white hover:bg-zinc-200 text-black px-6 py-3 font-mono text-xs uppercase tracking-widest font-bold transition-all">
+            VIEW PIECE SPECIFICATIONS &rarr;
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Look 02: Men's Tailored Pleated Joggers -->
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center border-t border-zinc-800/80 pt-16">
+      <div class="lg:col-span-5 space-y-6 lg:order-1 order-2 lg:pr-6">
+        <span class="text-xs font-mono text-zinc-500 tracking-widest uppercase">LOOK 02 // MASCULINE TAILORING</span>
+        <h2 class="text-3xl font-extrabold font-brand text-white uppercase tracking-wider">
+          FLUID PLEATS & WIDE SWEEP
+        </h2>
+        <p class="text-xs font-mono text-zinc-300 leading-relaxed">
+          Subverting lounge wear into sartorial streetwear. Deep front pleats deliver continuous drape down to the foot, pairing seamlessly with retro sneakers or slides.
+        </p>
+        <div class="p-4 bg-zinc-950 border border-zinc-800 font-mono text-xs space-y-1">
+          <p class="text-white font-bold">SOLITUDE WIDE-LEG PLEATED JOGGERS</p>
+          <p class="text-zinc-400">Midnight Black · 420 GSM Brushed Fleece</p>
+          <p class="text-emerald-400 pt-1" data-price-lkr="11800" data-price-usd="39">Rs. 11,800</p>
+        </div>
+        <div>
+          <a href="product.html?id=solitude-joggers" class="inline-block bg-white hover:bg-zinc-200 text-black px-6 py-3 font-mono text-xs uppercase tracking-widest font-bold transition-all">
+            VIEW PIECE SPECIFICATIONS &rarr;
+          </a>
+        </div>
+      </div>
+      <div class="lg:col-span-7 overflow-hidden bg-zinc-950 border border-zinc-800 aspect-[3/4] max-h-[800px] lg:order-2 order-1 group">
+        <img src="assets/images/jogger-solitude-male.jpg" alt="Men's Wide-Leg Joggers Editorial" class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105">
+      </div>
+    </div>
+
+    <!-- Look 03: Women's Styled High-Waist Wide Joggers -->
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center border-t border-zinc-800/80 pt-16">
+      <div class="lg:col-span-7 overflow-hidden bg-zinc-950 border border-zinc-800 aspect-[3/4] max-h-[800px] group">
+        <img src="assets/images/jogger-solitude-female.jpg" alt="Women's High-Waisted Wide Joggers Editorial" class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105">
+      </div>
+      <div class="lg:col-span-5 space-y-6 lg:pl-6">
+        <span class="text-xs font-mono text-zinc-500 tracking-widest uppercase">LOOK 03 // FEMININE MINIMALISM</span>
+        <h2 class="text-3xl font-extrabold font-brand text-white uppercase tracking-wider">
+          UNISEX ELEGANCE
+        </h2>
+        <p class="text-xs font-mono text-zinc-300 leading-relaxed">
+          High-waisted pairing with cropped silhouettes. The encased elastic waistband cinches without pinching, while the brushed fleece contours naturally.
+        </p>
+        <div class="p-4 bg-zinc-950 border border-zinc-800 font-mono text-xs space-y-1">
+          <p class="text-white font-bold">SOLITUDE WIDE-LEG PLEATED JOGGERS</p>
+          <p class="text-zinc-400">Midnight Black · Unisex Proportions</p>
+          <p class="text-emerald-400 pt-1" data-price-lkr="11800" data-price-usd="39">Rs. 11,800</p>
+        </div>
+        <div>
+          <a href="product.html?id=solitude-joggers" class="inline-block bg-white hover:bg-zinc-200 text-black px-6 py-3 font-mono text-xs uppercase tracking-widest font-bold transition-all">
+            VIEW PIECE SPECIFICATIONS &rarr;
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Look 04: Acid Wash Manifesto Back Print Tee -->
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center border-t border-zinc-800/80 pt-16">
+      <div class="lg:col-span-5 space-y-6 lg:order-1 order-2 lg:pr-6">
+        <span class="text-xs font-mono text-zinc-500 tracking-widest uppercase">LOOK 04 // THE MANIFESTO PIECE</span>
+        <h2 class="text-3xl font-extrabold font-brand text-white uppercase tracking-wider">
+          STILLNESS OVER CHAOS
+        </h2>
+        <p class="text-xs font-mono text-zinc-300 leading-relaxed">
+          An acid-washed canvas of quiet defiance. Screen-printed with the collection’s core doctrine across the shoulder blades in high-density matte ink.
+        </p>
+        <div class="p-4 bg-zinc-950 border border-zinc-800 font-mono text-xs space-y-1">
+          <p class="text-white font-bold">SOLITUDE ACID-WASH OVERSIZED TEE</p>
+          <p class="text-zinc-400">Washed Carbon · 280 GSM Stone Wash</p>
+          <p class="text-emerald-400 pt-1" data-price-lkr="7900" data-price-usd="26">Rs. 7,900</p>
+        </div>
+        <div>
+          <a href="product.html?id=solitude-tee" class="inline-block bg-white hover:bg-zinc-200 text-black px-6 py-3 font-mono text-xs uppercase tracking-widest font-bold transition-all">
+            VIEW PIECE SPECIFICATIONS &rarr;
+          </a>
+        </div>
+      </div>
+      <div class="lg:col-span-7 overflow-hidden bg-zinc-950 border border-zinc-800 aspect-[3/4] max-h-[800px] lg:order-2 order-1 group">
+        <img src="assets/images/tee-solitude.jpg" alt="Solitude Manifesto Back Tee Lookbook" class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105">
+      </div>
+    </div>
+
+    <!-- Look 05: Raw Muscle Armcut -->
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center border-t border-zinc-800/80 pt-16">
+      <div class="lg:col-span-7 overflow-hidden bg-zinc-950 border border-zinc-800 aspect-[3/4] max-h-[800px] group">
+        <img src="assets/images/armcut-solitude.jpg" alt="Solitude Raw Muscle Armcut Editorial" class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105">
+      </div>
+      <div class="lg:col-span-5 space-y-6 lg:pl-6">
+        <span class="text-xs font-mono text-zinc-500 tracking-widest uppercase">LOOK 05 // COMMANDING BONE CHALK</span>
+        <h2 class="text-3xl font-extrabold font-brand text-white uppercase tracking-wider">
+          RAW ARCHITECTURAL CUT
+        </h2>
+        <p class="text-xs font-mono text-zinc-300 leading-relaxed">
+          Cut with raw rolled edges and high-contrast typography across the torso. Raw bone white compact cotton tailored for unrestrained mobility and bold street presence.
+        </p>
+        <div class="p-4 bg-zinc-950 border border-zinc-800 font-mono text-xs space-y-1">
+          <p class="text-white font-bold">SOLITUDE RAW-CUT MUSCLE ARMCUT</p>
+          <p class="text-zinc-400">Bone Chalk · 260 GSM Compact Cotton</p>
+          <p class="text-emerald-400 pt-1" data-price-lkr="6800" data-price-usd="23">Rs. 6,800</p>
+        </div>
+        <div>
+          <a href="product.html?id=solitude-armcut" class="inline-block bg-white hover:bg-zinc-200 text-black px-6 py-3 font-mono text-xs uppercase tracking-widest font-bold transition-all">
+            VIEW PIECE SPECIFICATIONS &rarr;
+          </a>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- Lookbook Call to Action -->
+  <section class="py-20 border-t border-zinc-800 bg-black text-center">
+    <div class="max-w-2xl mx-auto px-4 space-y-6">
+      <h3 class="text-3xl font-extrabold font-brand text-white uppercase">ACQUIRE DROP 01</h3>
+      <p class="text-xs font-mono text-zinc-400">All garments are limited run. Once the allocation closes, this batch will not be reprinted.</p>
+      <div class="pt-2">
+        <a href="shop.html" class="inline-block bg-white hover:bg-zinc-200 text-black px-10 py-4 font-mono text-xs uppercase tracking-widest font-bold transition-all">
+          ENTER THE STORE
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-black border-t border-zinc-800 text-zinc-400 py-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-8 flex flex-col md:flex-row items-center justify-between gap-6 text-xs font-mono">
+      <div>© 2026 INEJ STUDIOS. STILLNESS OVER CHAOS.</div>
+      <div class="flex gap-6">
+        <a href="index.html" class="hover:text-white">Home</a>
+        <a href="shop.html" class="hover:text-white">Shop</a>
+        <a href="about.html" class="hover:text-white">Manifesto</a>
+        <a href="contact.html" class="hover:text-white">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/products.js"></script>
+  <script src="assets/js/cart.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

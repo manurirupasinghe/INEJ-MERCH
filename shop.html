@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SHOP DROP 01: SOLITUDE — INEJ STUDIOS</title>
+  <meta name="description" content="Shop INEJ Studios Drop 01 'Solitude'. 480 GSM Heavyweight Hoodies, Wide-Leg Tailored Joggers, Acid Wash Tees, and Raw Armcuts.">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              black: '#09090b',
+              surface: '#121215',
+              card: '#18181b',
+              border: 'rgba(255,255,255,0.08)',
+              subtle: '#27272a',
+              text: '#f4f4f5',
+              muted: '#a1a1aa'
+            }
+          },
+          fontFamily: {
+            brand: ['Syne', 'sans-serif'],
+            serif: ['Cinzel', 'serif'],
+            mono: ['JetBrains Mono', 'monospace'],
+            body: ['Space Grotesk', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="bg-[#09090b] text-[#f4f4f5] antialiased selection:bg-white selection:text-black">
+
+  <!-- Grain Texture Overlay -->
+  <div class="grain-overlay"></div>
+
+  <!-- Announcement Bar -->
+  <div class="bg-black border-b border-zinc-800 text-zinc-300 py-2 overflow-hidden select-none">
+    <div class="animate-ticker flex items-center whitespace-nowrap text-xs font-mono tracking-widest uppercase">
+      <span class="mx-6 text-emerald-400">● FREE ISLANDWIDE EXPRESS SHIPPING OVER RS. 20,000</span>
+      <span class="mx-6 text-zinc-400">✦ DROP 01: SOLITUDE // ARCHIVAL BATCH</span>
+      <span class="mx-6 text-white font-bold">● WHATSAPP DIRECT ORDERS AVAILABLE</span>
+      <span class="mx-6 text-zinc-400">✦ 480 GSM BESPOKE FRENCH TERRY COTTON</span>
+      <span class="mx-6 text-emerald-400">● FREE ISLANDWIDE EXPRESS SHIPPING OVER RS. 20,000</span>
+      <span class="mx-6 text-zinc-400">✦ DROP 01: SOLITUDE // ARCHIVAL BATCH</span>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header id="main-navbar" class="sticky top-0 left-0 w-full z-40 bg-[#09090b]/90 border-b border-zinc-800/80 backdrop-blur-md py-4 px-4 sm:px-8">
+    <div class="max-w-7xl mx-auto flex items-center justify-between">
+      
+      <div class="flex items-center gap-6">
+        <button id="mobile-menu-btn" class="lg:hidden p-2 text-zinc-300 hover:text-white" aria-label="Open menu">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+        </button>
+
+        <nav class="hidden lg:flex items-center gap-8 text-xs font-mono tracking-widest uppercase">
+          <a href="shop.html" class="text-white border-b border-white pb-0.5">The Drop</a>
+          <a href="lookbook.html" class="text-zinc-400 hover:text-white transition-colors">Lookbook</a>
+          <a href="about.html" class="text-zinc-400 hover:text-white transition-colors">Manifesto</a>
+          <a href="contact.html" class="text-zinc-400 hover:text-white transition-colors">Support</a>
+        </nav>
+      </div>
+
+      <div class="text-center">
+        <a href="index.html" class="group inline-block">
+          <span class="text-3xl sm:text-4xl font-extrabold font-brand tracking-[0.25em] text-white group-hover:opacity-80 transition-opacity">
+            INEJ
+          </span>
+          <span class="block text-[9px] font-mono tracking-[0.4em] text-zinc-400 uppercase -mt-1">
+            STUDIOS // CLOTHING
+          </span>
+        </a>
+      </div>
+
+      <div class="flex items-center gap-3 sm:gap-5">
+        <div class="hidden sm:flex items-center border border-zinc-800 rounded-sm p-0.5 bg-black/60 font-mono text-[10px]">
+          <button data-currency="LKR" class="currency-toggle-btn px-2.5 py-1 text-zinc-400 hover:text-white transition-colors">LKR</button>
+          <button data-currency="USD" class="currency-toggle-btn px-2.5 py-1 text-zinc-400 hover:text-white transition-colors">USD</button>
+        </div>
+
+        <button class="open-cart-btn relative flex items-center gap-2 bg-zinc-900 hover:bg-zinc-800 border border-zinc-700/80 px-3.5 py-2 transition-all">
+          <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/>
+          </svg>
+          <span class="text-xs font-mono font-bold tracking-wider text-white hidden sm:inline">BAG</span>
+          <span class="cart-count-badge hidden w-4 h-4 rounded-full bg-white text-black text-[10px] font-bold flex items-center justify-center font-mono">0</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Menu Drawer -->
+  <div id="mobile-menu-backdrop" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 hidden opacity-0 transition-opacity duration-300"></div>
+  <aside id="mobile-menu-drawer" class="fixed top-0 left-0 h-full w-80 max-w-full bg-[#0d0d10] border-r border-zinc-800 z-50 transform -translate-x-full transition-transform duration-300 p-6 flex flex-col justify-between">
+    <div>
+      <div class="flex justify-between items-center pb-6 border-b border-zinc-800">
+        <span class="text-2xl font-bold font-brand tracking-widest text-white">INEJ</span>
+        <button id="mobile-menu-close" class="p-2 text-zinc-400 hover:text-white" aria-label="Close menu">✕</button>
+      </div>
+      <nav class="mt-8 space-y-5 font-brand text-lg tracking-wider">
+        <a href="index.html" class="block text-zinc-400 hover:text-white">Home</a>
+        <a href="shop.html" class="block text-white">Shop Drop 01: Solitude</a>
+        <a href="lookbook.html" class="block text-zinc-400 hover:text-white">Visual Lookbook</a>
+        <a href="about.html" class="block text-zinc-400 hover:text-white">Brand Manifesto</a>
+        <a href="contact.html" class="block text-zinc-400 hover:text-white">Contact & WhatsApp</a>
+      </nav>
+      <div class="mt-8 pt-6 border-t border-zinc-800">
+        <span class="text-[10px] font-mono text-zinc-500 uppercase tracking-widest block mb-2">SELECT CURRENCY</span>
+        <div class="flex gap-2">
+          <button data-currency="LKR" class="currency-toggle-btn flex-1 py-2 border border-zinc-700 font-mono text-xs text-center text-white">LKR (Rs.)</button>
+          <button data-currency="USD" class="currency-toggle-btn flex-1 py-2 border border-zinc-700 font-mono text-xs text-center text-zinc-400">USD ($)</button>
+        </div>
+      </div>
+    </div>
+    <div class="pt-6 border-t border-zinc-800 text-xs font-mono text-zinc-500">
+      INEJ STUDIOS © 2026 // STILLNESS OVER CHAOS
+    </div>
+  </aside>
+
+  <!-- Page Header -->
+  <div class="pt-12 pb-8 border-b border-zinc-800/80 bg-[#0c0c0f]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-8">
+      <div class="flex flex-col md:flex-row md:items-end justify-between gap-6">
+        <div>
+          <span class="text-xs font-mono text-zinc-500 uppercase tracking-widest block mb-2">COLLECTION 01 CATALOG</span>
+          <h1 class="text-4xl sm:text-6xl font-extrabold font-brand tracking-tight text-white uppercase">
+            SOLITUDE
+          </h1>
+          <p class="text-xs font-mono text-zinc-400 mt-2 max-w-lg">
+            A 4-piece architectural capsule engineered in obsidian black, washed carbon, and bone chalk. Designed for physical calm and quiet defiance.
+          </p>
+        </div>
+
+        <div class="flex items-center gap-3">
+          <span class="text-xs font-mono text-zinc-400">Total Pieces:</span>
+          <span class="px-2.5 py-1 bg-zinc-900 border border-zinc-700 font-mono text-xs text-white font-bold">4 ICONS</span>
+        </div>
+      </div>
+
+      <!-- Filter & Sort Bar -->
+      <div class="mt-8 pt-6 border-t border-zinc-800/60 flex flex-wrap items-center justify-between gap-4">
+        
+        <!-- Category Filter Tabs -->
+        <div class="flex flex-wrap gap-2 text-xs font-mono" id="category-filters">
+          <button data-cat="all" class="filter-btn px-4 py-2 bg-white text-black font-semibold transition-colors">ALL ITEMS (4)</button>
+          <button data-cat="hoodies" class="filter-btn px-4 py-2 bg-zinc-900 border border-zinc-800 text-zinc-400 hover:text-white transition-colors">HOODIES</button>
+          <button data-cat="joggers" class="filter-btn px-4 py-2 bg-zinc-900 border border-zinc-800 text-zinc-400 hover:text-white transition-colors">JOGGERS</button>
+          <button data-cat="tees" class="filter-btn px-4 py-2 bg-zinc-900 border border-zinc-800 text-zinc-400 hover:text-white transition-colors">TEES & ARMCUTS</button>
+        </div>
+
+        <!-- Sort Select -->
+        <div class="flex items-center gap-2">
+          <span class="text-xs font-mono text-zinc-500 uppercase">SORT BY:</span>
+          <select id="sort-select" class="bg-zinc-900 border border-zinc-700 text-xs font-mono text-zinc-300 py-2 px-3 focus:outline-none focus:border-white">
+            <option value="featured">Featured / Curated</option>
+            <option value="price-asc">Price: Low to High</option>
+            <option value="price-desc">Price: High to Low</option>
+            <option value="name">Alphabetical</option>
+          </select>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- Catalog Grid Container -->
+  <main class="py-16 max-w-7xl mx-auto px-4 sm:px-8">
+    <div id="product-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+      <!-- Populated dynamically via JavaScript with fallback -->
+    </div>
+  </main>
+
+  <!-- Size Chart & Fit Guarantee Banner -->
+  <section class="py-16 border-t border-zinc-800 bg-[#0d0d10]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-8 grid grid-cols-1 md:grid-cols-3 gap-8 text-center sm:text-left">
+      <div class="flex gap-4 items-start">
+        <div class="p-3 bg-zinc-900 border border-zinc-800 text-white font-mono text-sm">01</div>
+        <div>
+          <h4 class="text-sm font-bold font-brand tracking-wider text-white">RELAXED UNISEX PROPORTIONS</h4>
+          <p class="text-xs font-mono text-zinc-400 mt-1">If you prefer an authentic boxy oversized streetwear silhouette, choose your usual standard size.</p>
+        </div>
+      </div>
+
+      <div class="flex gap-4 items-start">
+        <div class="p-3 bg-zinc-900 border border-zinc-800 text-white font-mono text-sm">02</div>
+        <div>
+          <h4 class="text-sm font-bold font-brand tracking-wider text-white">7-DAY FIT EXCHANGE</h4>
+          <p class="text-xs font-mono text-zinc-400 mt-1">Need a size change? Our Colombo dispatch team arranges swift door-to-door swaps islandwide.</p>
+        </div>
+      </div>
+
+      <div class="flex gap-4 items-start">
+        <div class="p-3 bg-zinc-900 border border-zinc-800 text-white font-mono text-sm">03</div>
+        <div>
+          <h4 class="text-sm font-bold font-brand tracking-wider text-white">DIRECT SIZING ADVICE</h4>
+          <p class="text-xs font-mono text-zinc-400 mt-1">Unsure of your size? Message our studio styling team on WhatsApp for instant personalized measurement guidance.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-black border-t border-zinc-800 text-zinc-400 py-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-8 flex flex-col md:flex-row items-center justify-between gap-6">
+      <div class="flex items-center gap-6">
+        <span class="text-xl font-bold font-brand tracking-widest text-white">INEJ</span>
+        <span class="text-xs font-mono text-zinc-500">COLLECTION 01: SOLITUDE</span>
+      </div>
+
+      <div class="flex gap-6 text-xs font-mono">
+        <a href="index.html" class="hover:text-white">Home</a>
+        <a href="lookbook.html" class="hover:text-white">Lookbook</a>
+        <a href="about.html" class="hover:text-white">Manifesto</a>
+        <a href="contact.html" class="hover:text-white">Support & WhatsApp</a>
+      </div>
+
+      <div class="text-xs font-mono text-zinc-600">
+        © 2026 INEJ STUDIOS. ALL RIGHTS RESERVED.
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="assets/js/products.js"></script>
+  <script src="assets/js/cart.js"></script>
+  <script src="assets/js/main.js"></script>
+
+  <!-- Shop Grid Script -->
+  <script>
+    let activeCategory = 'all';
+    let activeSort = 'featured';
+
+    function renderShopGrid() {
+      const grid = document.getElementById('product-grid');
+      if (!grid) return;
+
+      let items = [...PRODUCTS];
+
+      // Filter
+      if (activeCategory !== 'all') {
+        items = items.filter(p => p.category === activeCategory);
+      }
+
+      // Sort
+      if (activeSort === 'price-asc') {
+        items.sort((a, b) => a.priceLKR - b.priceLKR);
+      } else if (activeSort === 'price-desc') {
+        items.sort((a, b) => b.priceLKR - a.priceLKR);
+      } else if (activeSort === 'name') {
+        items.sort((a, b) => a.name.localeCompare(b.name));
+      }
+
+      let html = '';
+      items.forEach(product => {
+        const isJogger = product.id === 'solitude-joggers';
+
+        html += `
+          <div class="glass-card flex flex-col justify-between group">
+            <div class="relative overflow-hidden aspect-[3/4] bg-zinc-950">
+              <a href="product.html?id=${product.id}" class="block w-full h-full">
+                ${isJogger ? `
+                  <img src="${product.primaryImage}" alt="${product.name}" class="w-full h-full object-cover transition-opacity duration-500 group-hover:opacity-0 absolute inset-0">
+                  <img src="${product.hoverImage}" alt="${product.name} Styled" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                ` : `
+                  <img src="${product.primaryImage}" alt="${product.name}" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                `}
+              </a>
+              
+              <div class="absolute top-3 left-3 bg-black/85 border border-zinc-800 px-2 py-1 text-[9px] font-mono tracking-widest text-white uppercase">
+                ${product.badge}
+              </div>
+
+              <button onclick="toggleWishlist('${product.id}')" class="absolute top-3 right-3 p-2 bg-black/60 hover:bg-black text-white rounded-full transition-colors" title="Save to wishlist">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
+                </svg>
+              </button>
+
+              <div class="absolute bottom-3 left-3 right-3 flex justify-between items-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <span class="text-[9px] font-mono text-zinc-300 bg-black/80 px-2 py-1">${product.gsm}</span>
+                <span class="text-[9px] font-mono text-emerald-400 bg-black/80 px-2 py-1">IN STOCK</span>
+              </div>
+            </div>
+
+            <div class="p-5 flex-1 flex flex-col justify-between space-y-4">
+              <div>
+                <span class="text-[10px] font-mono text-zinc-500 uppercase tracking-widest">${product.collection}</span>
+                <h3 class="text-sm font-bold font-brand tracking-wider text-white mt-1">
+                  <a href="product.html?id=${product.id}" class="hover:underline">${product.name}</a>
+                </h3>
+                <p class="text-xs text-zinc-400 font-mono mt-1">${product.color} · ${product.fit.split('/')[0]}</p>
+              </div>
+
+              <!-- Available Sizes pills -->
+              <div class="flex items-center gap-1.5 pt-1">
+                <span class="text-[9px] font-mono text-zinc-500 mr-1">SIZES:</span>
+                ${product.sizes.map(s => `
+                  <span class="text-[9px] font-mono px-1.5 py-0.5 border border-zinc-800 text-zinc-300 bg-zinc-950">${s.size}</span>
+                `).join('')}
+              </div>
+
+              <div class="pt-3 border-t border-zinc-800/80 flex items-center justify-between">
+                <div>
+                  <span class="text-sm font-mono font-bold text-white block" data-price-lkr="${product.priceLKR}" data-price-usd="${product.priceUSD}">
+                    ${formatPrice(product.priceLKR, product.priceUSD)}
+                  </span>
+                </div>
+                <div class="flex items-center gap-2">
+                  <a href="product.html?id=${product.id}" class="border border-zinc-700 hover:border-white text-zinc-300 hover:text-white text-[10px] font-mono uppercase tracking-widest px-3 py-2 transition-all">
+                    DETAILS
+                  </a>
+                  <button onclick="quickAddToCart('${product.id}')" class="bg-white hover:bg-zinc-200 text-black text-[10px] font-mono uppercase tracking-widest px-3 py-2 font-bold transition-all">
+                    + BAG
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        `;
+      });
+
+      grid.innerHTML = html;
+      updateCurrencyDisplay();
+    }
+
+    // Filter Buttons binding
+    document.querySelectorAll('.filter-btn').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        document.querySelectorAll('.filter-btn').forEach(b => {
+          b.classList.remove('bg-white', 'text-black', 'font-semibold');
+          b.classList.add('bg-zinc-900', 'text-zinc-400');
+        });
+        e.currentTarget.classList.add('bg-white', 'text-black', 'font-semibold');
+        e.currentTarget.classList.remove('bg-zinc-900', 'text-zinc-400');
+        activeCategory = e.currentTarget.dataset.cat;
+        renderShopGrid();
+      });
+    });
+
+    // Sort select binding
+    document.getElementById('sort-select').addEventListener('change', (e) => {
+      activeSort = e.target.value;
+      renderShopGrid();
+    });
+
+    document.addEventListener('DOMContentLoaded', () => {
+      renderShopGrid();
+      window.addEventListener('currencyChanged', renderShopGrid);
+    });
+  </script>
+</body>
+</html>

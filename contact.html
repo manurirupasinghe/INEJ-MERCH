@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CONCIERGE & SUPPORT — INEJ STUDIOS</title>
+  <meta name="description" content="Contact the INEJ Studios atelier. WhatsApp direct order concierge, Colombo showroom information, sizing assistance, and FAQ.">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              black: '#09090b',
+              surface: '#121215',
+              card: '#18181b',
+              border: 'rgba(255,255,255,0.08)',
+              subtle: '#27272a',
+              text: '#f4f4f5',
+              muted: '#a1a1aa'
+            }
+          },
+          fontFamily: {
+            brand: ['Syne', 'sans-serif'],
+            serif: ['Cinzel', 'serif'],
+            mono: ['JetBrains Mono', 'monospace'],
+            body: ['Space Grotesk', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="bg-[#09090b] text-[#f4f4f5] antialiased selection:bg-white selection:text-black">
+
+  <div class="grain-overlay"></div>
+
+  <!-- Announcement Bar -->
+  <div class="bg-black border-b border-zinc-800 text-zinc-300 py-2 overflow-hidden select-none">
+    <div class="animate-ticker flex items-center whitespace-nowrap text-xs font-mono tracking-widest uppercase">
+      <span class="mx-6 text-emerald-400">● 24/7 WHATSAPP CONCIERGE: +94 (77) 123-4567</span>
+      <span class="mx-6 text-zinc-400">✦ ISLANDWIDE DOORSTEP DELIVERY & FITTING SWAPS</span>
+      <span class="mx-6 text-white font-bold">● VISIT COLOMBO STUDIO BY APPOINTMENT</span>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header id="main-navbar" class="sticky top-0 left-0 w-full z-40 bg-[#09090b]/90 border-b border-zinc-800/80 backdrop-blur-md py-4 px-4 sm:px-8">
+    <div class="max-w-7xl mx-auto flex items-center justify-between">
+      
+      <div class="flex items-center gap-6">
+        <button id="mobile-menu-btn" class="lg:hidden p-2 text-zinc-300 hover:text-white" aria-label="Open menu">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+        </button>
+
+        <nav class="hidden lg:flex items-center gap-8 text-xs font-mono tracking-widest uppercase">
+          <a href="shop.html" class="text-zinc-400 hover:text-white transition-colors">The Drop</a>
+          <a href="lookbook.html" class="text-zinc-400 hover:text-white transition-colors">Lookbook</a>
+          <a href="about.html" class="text-zinc-400 hover:text-white transition-colors">Manifesto</a>
+          <a href="contact.html" class="text-white border-b border-white pb-0.5">Support</a>
+        </nav>
+      </div>
+
+      <div class="text-center">
+        <a href="index.html" class="group inline-block">
+          <span class="text-3xl sm:text-4xl font-extrabold font-brand tracking-[0.25em] text-white group-hover:opacity-80 transition-opacity">
+            INEJ
+          </span>
+          <span class="block text-[9px] font-mono tracking-[0.4em] text-zinc-400 uppercase -mt-1">
+            STUDIOS // CLOTHING
+          </span>
+        </a>
+      </div>
+
+      <div class="flex items-center gap-3 sm:gap-5">
+        <div class="hidden sm:flex items-center border border-zinc-800 rounded-sm p-0.5 bg-black/60 font-mono text-[10px]">
+          <button data-currency="LKR" class="currency-toggle-btn px-2.5 py-1 text-zinc-400 hover:text-white transition-colors">LKR</button>
+          <button data-currency="USD" class="currency-toggle-btn px-2.5 py-1 text-zinc-400 hover:text-white transition-colors">USD</button>
+        </div>
+
+        <button class="open-cart-btn relative flex items-center gap-2 bg-zinc-900 hover:bg-zinc-800 border border-zinc-700/80 px-3.5 py-2 transition-all">
+          <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/>
+          </svg>
+          <span class="text-xs font-mono font-bold tracking-wider text-white hidden sm:inline">BAG</span>
+          <span class="cart-count-badge hidden w-4 h-4 rounded-full bg-white text-black text-[10px] font-bold flex items-center justify-center font-mono">0</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Menu Drawer -->
+  <div id="mobile-menu-backdrop" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 hidden opacity-0 transition-opacity duration-300"></div>
+  <aside id="mobile-menu-drawer" class="fixed top-0 left-0 h-full w-80 max-w-full bg-[#0d0d10] border-r border-zinc-800 z-50 transform -translate-x-full transition-transform duration-300 p-6 flex flex-col justify-between">
+    <div>
+      <div class="flex justify-between items-center pb-6 border-b border-zinc-800">
+        <span class="text-2xl font-bold font-brand tracking-widest text-white">INEJ</span>
+        <button id="mobile-menu-close" class="p-2 text-zinc-400 hover:text-white" aria-label="Close menu">✕</button>
+      </div>
+      <nav class="mt-8 space-y-5 font-brand text-lg tracking-wider">
+        <a href="index.html" class="block text-zinc-400 hover:text-white">Home</a>
+        <a href="shop.html" class="block text-zinc-400 hover:text-white">Shop Drop 01: Solitude</a>
+        <a href="lookbook.html" class="block text-zinc-400 hover:text-white">Visual Lookbook</a>
+        <a href="about.html" class="block text-zinc-400 hover:text-white">Brand Manifesto</a>
+        <a href="contact.html" class="block text-white">Contact & WhatsApp</a>
+      </nav>
+    </div>
+    <div class="pt-6 border-t border-zinc-800 text-xs font-mono text-zinc-500">
+      INEJ STUDIOS © 2026 // STILLNESS OVER CHAOS
+    </div>
+  </aside>
+
+  <!-- Contact Page Content -->
+  <main class="py-16 max-w-7xl mx-auto px-4 sm:px-8">
+    
+    <div class="text-center max-w-2xl mx-auto mb-16 space-y-3">
+      <span class="text-xs font-mono tracking-[0.4em] text-emerald-400 uppercase">ATELIER CONCIERGE</span>
+      <h1 class="text-4xl sm:text-6xl font-extrabold font-brand tracking-tight text-white uppercase">
+        CONNECT WITH INEJ
+      </h1>
+      <p class="text-xs font-mono text-zinc-400">
+        Order directly through WhatsApp, inquire about private showroom appointments, or request custom sizing consultations.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+      
+      <!-- Left Column: Quick Channels & Studio Address -->
+      <div class="lg:col-span-5 space-y-8">
+        
+        <!-- WhatsApp Callout Box -->
+        <div class="p-8 bg-[#0f1d16] border border-emerald-900/60 space-y-4">
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center">
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.007c.106.005.249-.04.39.299.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.087-.179.182-.077.357.101.174.45 1.002 1.217 1.684.99.88 1.824 1.153 2.084 1.283.26.13.413.116.565-.058.152-.174.65-1.026.824-1.378.174-.352.348-.295.586-.206.238.089 1.517.714 1.777.844.26.13.434.195.498.304.064.108.064.63-.08 1.035z"/>
+              </svg>
+            </div>
+            <div>
+              <span class="text-[10px] font-mono text-emerald-400 tracking-widest uppercase block">FASTEST RESPONSE</span>
+              <h3 class="text-base font-bold font-brand tracking-wider text-white">WHATSAPP DIRECT CONCIERGE</h3>
+            </div>
+          </div>
+
+          <p class="text-xs font-mono text-emerald-200/80 leading-relaxed">
+            Message us directly with your required piece, size, and address. We confirm orders and dispatch within hours.
+          </p>
+
+          <a href="https://wa.me/94771234567?text=Hello%20INEJ%20Studios,%20I%20would%20like%20to%20inquire%20about%20Drop%2001:%20Solitude" target="_blank" class="block w-full bg-emerald-500 hover:bg-emerald-400 text-black py-3 px-4 font-mono text-xs uppercase tracking-widest font-bold text-center transition-all">
+            OPEN WHATSAPP CHAT &rarr;
+          </a>
+        </div>
+
+        <!-- Details List -->
+        <div class="space-y-6 font-mono text-xs text-zinc-300">
+          
+          <div class="p-6 bg-zinc-950 border border-zinc-800 space-y-2">
+            <span class="text-zinc-500 uppercase tracking-widest block text-[10px]">COLOMBO ATELIER</span>
+            <p class="font-bold text-white text-sm">INEJ STUDIOS PRIVATE SUITE</p>
+            <p class="text-zinc-400">Ward Place, Colombo 07, Sri Lanka</p>
+            <p class="text-zinc-500 text-[11px]">Showroom visits by prior appointment only.</p>
+          </div>
+
+          <div class="p-6 bg-zinc-950 border border-zinc-800 space-y-2">
+            <span class="text-zinc-500 uppercase tracking-widest block text-[10px]">DIRECT INQUIRIES</span>
+            <p class="text-zinc-400">Email: <span class="text-white">atelier@inejstudios.com</span></p>
+            <p class="text-zinc-400">Phone: <span class="text-white">+94 (77) 123-4567</span></p>
+            <p class="text-zinc-400">Operating: <span class="text-white">Monday – Saturday (10:00 - 20:00 IST)</span></p>
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- Right Column: Interactive Inquiry Form -->
+      <div class="lg:col-span-7 bg-[#121215] border border-zinc-800 p-8 sm:p-10 space-y-6">
+        <div>
+          <span class="text-[10px] font-mono text-zinc-400 uppercase tracking-widest">SEND A DISPATCH</span>
+          <h3 class="text-2xl font-bold font-brand tracking-wider text-white mt-1">ATELIER CONTACT FORM</h3>
+        </div>
+
+        <form id="contact-form" class="space-y-4">
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div>
+              <label class="block text-xs font-mono text-zinc-400 mb-1">YOUR NAME *</label>
+              <input type="text" required id="form-name" placeholder="Kasun Perera" class="w-full bg-zinc-900 border border-zinc-700/80 p-3 text-xs text-white focus:outline-none focus:border-white font-mono">
+            </div>
+            <div>
+              <label class="block text-xs font-mono text-zinc-400 mb-1">PHONE / WHATSAPP NUMBER *</label>
+              <input type="tel" required id="form-phone" placeholder="077 123 4567" class="w-full bg-zinc-900 border border-zinc-700/80 p-3 text-xs text-white focus:outline-none focus:border-white font-mono">
+            </div>
+          </div>
+
+          <div>
+            <label class="block text-xs font-mono text-zinc-400 mb-1">EMAIL ADDRESS *</label>
+            <input type="email" required id="form-email" placeholder="client@domain.com" class="w-full bg-zinc-900 border border-zinc-700/80 p-3 text-xs text-white focus:outline-none focus:border-white font-mono">
+          </div>
+
+          <div>
+            <label class="block text-xs font-mono text-zinc-400 mb-1">TOPIC OF INQUIRY</label>
+            <select id="form-topic" class="w-full bg-zinc-900 border border-zinc-700/80 p-3 text-xs text-white focus:outline-none focus:border-white font-mono">
+              <option value="order">New Order / WhatsApp Checkout</option>
+              <option value="sizing">Sizing & Fit Advice</option>
+              <option value="exchange">Exchange / Return Assistance</option>
+              <option value="wholesale">Stockist & Wholesale Inquiry</option>
+            </select>
+          </div>
+
+          <div>
+            <label class="block text-xs font-mono text-zinc-400 mb-1">MESSAGE *</label>
+            <textarea required id="form-message" rows="4" placeholder="Detail your inquiry or garment specifications..." class="w-full bg-zinc-900 border border-zinc-700/80 p-3 text-xs text-white focus:outline-none focus:border-white font-mono"></textarea>
+          </div>
+
+          <button type="submit" class="w-full bg-white hover:bg-zinc-200 text-black py-4 font-mono text-xs uppercase tracking-widest font-extrabold transition-all">
+            TRANSMIT INQUIRY
+          </button>
+        </form>
+      </div>
+
+    </div>
+
+    <!-- FAQ Accordion Section -->
+    <div class="mt-24 pt-16 border-t border-zinc-800 max-w-4xl mx-auto space-y-8">
+      <div class="text-center space-y-2">
+        <span class="text-xs font-mono text-zinc-500 uppercase tracking-widest">FREQUENTLY ASKED QUESTIONS</span>
+        <h3 class="text-3xl font-extrabold font-brand tracking-wider text-white uppercase">CLIENT INTELLIGENCE</h3>
+      </div>
+
+      <div class="space-y-3 font-mono text-xs">
+        
+        <div class="border border-zinc-800 bg-zinc-950/60">
+          <button class="faq-toggle w-full p-4 flex justify-between items-center text-left text-zinc-200 hover:text-white">
+            <span class="font-bold">HOW LONG DOES ISLANDWIDE DELIVERY TAKE IN SRI LANKA?</span>
+            <span class="text-zinc-500 text-base">+</span>
+          </button>
+          <div class="faq-content hidden px-4 pb-4 text-zinc-400 leading-relaxed">
+            All orders placed before 3:00 PM IST are packaged and dispatched same day. Delivery across Western Province takes 24-48 hours; all other provinces receive packages within 2–3 business days with tracking via SMS.
+          </div>
+        </div>
+
+        <div class="border border-zinc-800 bg-zinc-950/60">
+          <button class="faq-toggle w-full p-4 flex justify-between items-center text-left text-zinc-200 hover:text-white">
+            <span class="font-bold">HOW DOES WHATSAPP CHECKOUT WORK?</span>
+            <span class="text-zinc-500 text-base">+</span>
+          </button>
+          <div class="faq-content hidden px-4 pb-4 text-zinc-400 leading-relaxed">
+            When you tap "Quick Order via WhatsApp" in the cart drawer or product page, a complete order manifest including your chosen sizes and prices is automatically generated and sent to our team. You can then instantly pay via Bank Transfer, Koko Pay, or confirm Cash on Delivery.
+          </div>
+        </div>
+
+        <div class="border border-zinc-800 bg-zinc-950/60">
+          <button class="faq-toggle w-full p-4 flex justify-between items-center text-left text-zinc-200 hover:text-white">
+            <span class="font-bold">HOW SHOULD I WASH THE 480 GSM HOODIE AND ACID-WASH TEE?</span>
+            <span class="text-zinc-500 text-base">+</span>
+          </button>
+          <div class="faq-content hidden px-4 pb-4 text-zinc-400 leading-relaxed">
+            Turn garments inside-out. Machine wash cold (30°C max) on a delicate cycle using mild liquid detergent. Hang dry in shade. Avoid hot tumble drying to preserve the heavy cotton drape and discharge print sharpness.
+          </div>
+        </div>
+
+        <div class="border border-zinc-800 bg-zinc-950/60">
+          <button class="faq-toggle w-full p-4 flex justify-between items-center text-left text-zinc-200 hover:text-white">
+            <span class="font-bold">CAN I EXCHANGE MY PIECE IF THE FIT IS NOT AS EXPECTED?</span>
+            <span class="text-zinc-500 text-base">+</span>
+          </button>
+          <div class="faq-content hidden px-4 pb-4 text-zinc-400 leading-relaxed">
+            Yes. We offer a 7-day doorstep exchange policy across Sri Lanka. Simply WhatsApp our concierge team with your order number and requested size; we will arrange an exchange courier directly to your door.
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-black border-t border-zinc-800 text-zinc-400 py-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-8 flex flex-col md:flex-row items-center justify-between gap-6 text-xs font-mono">
+      <div>© 2026 INEJ STUDIOS. STILLNESS OVER CHAOS.</div>
+      <div class="flex gap-6">
+        <a href="index.html" class="hover:text-white">Home</a>
+        <a href="shop.html" class="hover:text-white">Shop</a>
+        <a href="lookbook.html" class="hover:text-white">Lookbook</a>
+        <a href="about.html" class="hover:text-white">Manifesto</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/products.js"></script>
+  <script src="assets/js/cart.js"></script>
+  <script src="assets/js/main.js"></script>
+
+  <script>
+    // FAQ Accordion
+    document.querySelectorAll('.faq-toggle').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const content = btn.nextElementSibling;
+        const icon = btn.querySelector('span:last-child');
+        const isHidden = content.classList.contains('hidden');
+
+        if (isHidden) {
+          content.classList.remove('hidden');
+          icon.textContent = '—';
+        } else {
+          content.classList.add('hidden');
+          icon.textContent = '+';
+        }
+      });
+    });
+
+    // Contact form submit
+    document.getElementById('contact-form').addEventListener('submit', (e) => {
+      e.preventDefault();
+      const name = document.getElementById('form-name').value;
+      showToast(`Transmission received, ${name}! Concierge will WhatsApp you.`);
+      e.target.reset();
+    });
+  </script>
+</body>
+</html>
